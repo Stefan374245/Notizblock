@@ -51,6 +51,27 @@ function moveNote(indexNote, startKey, destinationKey) {
     renderNotes();
     renderTrashNotes();
     renderArchivNotes();
+    scrollToSection(destinationKey);
+}
+
+/**
+ * Scrollt zum Zielbereich basierend auf dem Zielschlüssel.
+ * @param {string} destinationKey - Der Schlüssel des Zielbereichs (z. B. 'archivNotes', 'trashNotes', 'notes').
+ */
+function scrollToSection(destinationKey) {
+    let sectionId = '';
+
+    if (destinationKey === 'archivNotes') {
+        sectionId = 'archiv-content';
+    } else if (destinationKey === 'trashNotes') {
+        sectionId = 'trash-content';
+    } else if (destinationKey === 'notes') {
+        sectionId = 'content';
+    }
+
+    if (sectionId) {
+        location.href = `#${sectionId}`; // Scrollt zum entsprechenden Bereich
+    }
 }
 
 /**
