@@ -1,0 +1,58 @@
+/* Wrapper für Notizen, Papierkorb und Archiv */
+.note-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: var(--background-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 15px;
+    box-shadow: 0 2px 4px var(--box-shadow-color);
+}
+
+.note-item h3 {
+    margin: 0;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.note-item p {
+    margin: 5px 0 15px;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+/* Buttons für Aktionen (z. B. Archivieren, Löschen) */
+.note-item button {
+    align-self: center;
+    width: 50%;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 1000px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 200ms ease;
+}
+
+.note-item button:hover {
+    background-color: var(--primary-hover-color);
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 4px 8px var(--box-shadow-color);
+    transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 500px) {
+    .note-item {
+        padding: 10px;
+    }
+
+    .note-item button {
+        width: 100%;
+        text-align: center;
+    }
+}

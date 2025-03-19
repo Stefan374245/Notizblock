@@ -1,0 +1,22 @@
+.icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.btn {
+    width: 240px !important;
+}
+
+label svg {
+    transition: fill 200ms ease;
+}
+
+label svg:hover {
+    fill: var(--primary-color);
+}
+
+label svg:active {
+    fill: var(--secondary-color);
+  }

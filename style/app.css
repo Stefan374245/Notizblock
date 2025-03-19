@@ -1,0 +1,112 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 700px;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--box-shadow-color);
+}
+
+.wrapper h2 {
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: var(--label-font-weight);
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#note-title {
+    box-sizing: border-box;
+    padding: 12px 20px;
+    width: 100%;
+    background: none;
+    border: 2px solid var(--secondary-color);
+    border-radius: 1000px;
+    font: inherit;
+    color: var(--text-color);
+    caret-color: var(--accent-color);
+}
+
+#note-title:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+#note-content {
+    box-sizing: border-box;
+    padding: 12px 20px;
+    width: 100%;
+    background: none;
+    border: 2px solid var(--secondary-color);
+    border-radius: 15px;
+    font: inherit;
+    color: var(--text-color);
+    caret-color: var(--accent-color);
+    resize: none;
+}
+
+#note-content:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+button[type="submit"] {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 1000px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 200ms ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--primary-hover-color);
+}
+
+@media (max-width: 500px) {
+    .wrapper {
+        width: 100%;
+        padding: 10px;
+    }
+
+    form {
+        gap: 10px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        padding: 15px;
+    }
+}

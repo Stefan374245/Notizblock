@@ -1,0 +1,113 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    height: 60px;
+    background-color: var(--background-nav);
+  }
+  nav h1 {
+    margin : 0 20px;
+  }
+  .links-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  nav a {
+    padding: 0 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: ease-out 0.3s;
+  }
+  
+  nav a:hover {
+    background-color: var(--primary-color);
+  }
+  
+  nav a:active {
+    background-color: var(--secondary-color);
+  }
+  
+  nav .home-link {
+    margin-right: auto;
+    align-items: center;
+  }
+  
+  #sidebar-active {
+    display: none;
+  }
+  
+  .open-sidebar-btn,
+  .close-sidebar-btn {
+    display: none;
+  }
+
+  .open-sidebar-btn:hover,
+  .close-sidebar-btn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  
+  @media (max-width: 450px) {
+    .links-container {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 220px;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      z-index: 10;
+      background-color: var(--background-nav);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      transition: ease-out 0.7s;
+    }
+  
+    #sidebar-active:checked ~ .open-sidebar-btn {
+      display: none;
+    }
+
+    #sidebar-active:checked ~ #overlay {
+      display: block;
+      opacity: 1;
+  }
+
+    nav {
+      gap: 32%;
+    }
+
+    nav a {
+      box-sizing: border-box;
+      height: auto;
+      width: 100%;
+      padding: 20px 30px;
+      justify-content: flex-start;
+    }
+  
+    .open-sidebar-btn,
+    .close-sidebar-btn {
+      padding: 20px;
+      display: block;
+    }
+  
+    #sidebar-active:checked ~ .links-container {
+      right: 0;
+    }
+    #sidebar-active:checked ~ #overlay {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9;
+      transition: opacity 0.3s ease;
+    }
+    
+  }
+  

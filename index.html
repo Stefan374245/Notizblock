@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notizblock 3.0</title>
+
+    <link rel="stylesheet" href="./style/standard.css">
+    <link rel="stylesheet" href="./style/app.css">
+    <link rel="stylesheet" href="./style/fonts.css">
+    <link rel="stylesheet" href="./style/respNav.css">
+    <link rel="stylesheet" href="./style/notes.css">
+    <link rel="stylesheet" href="./style/assets.css">
+
+    <script src="./script/script.js"></script>
+    <script src="./script/db.js"></script>
+    <script src="./script/template.js"></script>
+    <script src="./script/render.js"></script>
+    <script src="./script/navBar.js"></script>
+</head>
+<body onload="init()">
+    <header>
+        
+        <nav>
+            <h1>Notizblock</h1>
+            <input type="checkbox" id="sidebar-active" />
+            <label for="sidebar-active" class="open-sidebar-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="32px"
+                viewBox="0 -960 960 960"
+                width="32px"
+                fill="#e8eaed">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+              </svg>
+            </label>
+            <label id="overlay" for="sidebar-active"></label>
+            <div class="links-container">
+              <label for="sidebar-active" class="close-sidebar-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="32px"
+                  viewBox="0 -960 960 960"
+                  width="32px"
+                  fill="#e8eaed">
+                  <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg>
+              </label>
+              <a class="home-link" href="#">Home</a>
+              <a href="#">About</a>
+              <a href="#">Impressum</a>
+            </div>
+          </nav>
+    </header>
+    <main id="main">
+        <section class="wrapper">
+            <h2>Neue Notiz erstellen</h2>
+            <form id="note-form" onsubmit="event.preventDefault(); addNote();">
+                <div class="form-group">
+                    <label for="note-title">Titel:</label>
+                    <input type="text" id="note-title" name="note-title" placeholder="Titel eingeben" required autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="note-content">Notiz:</label>
+                    <textarea id="note-content" name="note-content" placeholder="Notiz eingeben" rows="5" required autocomplete="off"></textarea>
+                </div>
+                <button type="submit">
+                    <img src="./assets/icons/safe.png" alt="Speichern" class="icon"> Speichern
+                </button>
+            </form>
+        </section>
+
+        <!-- Notizen anzeigen -->
+        <section class="wrapper">
+            <h2>Notizen</h2>
+            <div id="content">
+                <div class="note-item">
+                    <h3>Beispiel Titel</h3>
+                    <p>Beispiel Inhalt</p>
+                    <button onclick="moveNote(0, 'notes', 'trashNotes')">
+                        <img src="./assets/icons/delete.png" alt="In den Papierkorb" class="icon"> In den Papierkorb
+                    </button>
+                    <button onclick="moveNote(0, 'notes', 'archivNotes')">
+                        <img src="./assets/icons/archive.png" alt="Archivieren" class="icon"> Archivieren
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Papierkorb anzeigen -->
+        <section class="wrapper">
+            <h2>Papierkorb</h2>
+            <div id="trash-content">
+                <div class="note-item">
+                    <h3>Beispiel Papierkorb-Titel</h3>
+                    <p>Beispiel Papierkorb-Inhalt</p>
+                    <button onclick="moveNote(0, 'trashNotes', 'notes')">
+                        <img src="./assets/icons/undo_icon.png" alt="Wiederherstellen" class="icon"> Wiederherstellen
+                    </button>
+                    <button onclick="deleteTrash(0)">
+                        <img src="./assets/icons/delete.png" alt="Löschen" class="icon"> Löschen
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Archiv anzeigen -->
+        <section class="wrapper">
+            <h2>Archiv</h2>
+            <div id="archiv-content">
+                <div class="note-item">
+                    <h3>Beispiel Archiv-Titel</h3>
+                    <p>Beispiel Archiv-Inhalt</p>
+                    <button onclick="moveNote(0, 'archivNotes', 'notes')">
+                        <img src="./assets/icons/undo_icon.png" alt="Wiederherstellen" class="icon"> Wiederherstellen
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h1>Notizblock</h1>
+            </div>
+            <div class="footer-right">
+                <a href="#">AGB</a>
+                <a href="#">Impressum</a>
+                <a href="#">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
