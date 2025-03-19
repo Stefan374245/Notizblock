@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./style/respNav.css">
     <link rel="stylesheet" href="./style/notes.css">
     <link rel="stylesheet" href="./style/assets.css">
+    <link rel="stylesheet" href="./style/darkmode.css">
+    
 
     <script src="./script/script.js"></script>
     <script src="./script/db.js"></script>
@@ -23,6 +25,15 @@
         
         <nav>
             <h1>Notizblock</h1>
+            <div class="dark-mode-toggle">
+                <input type="checkbox" id="dark-mode-checkbox" />
+                <label for="dark-mode-checkbox" class="toggle-label">
+                    <span class="toggle-ball">
+                        <img src="./assets/icons/svg/moon-icon.svg" alt="Mond" class="dark-icon moon-icon" />
+                        <img src="./assets/icons/svg/sun-icon.svg" alt="Sonne" class="dark-icon sun-icon" />
+                    </span>
+                </label>
+            </div>
             <input type="checkbox" id="sidebar-active" />
             <label for="sidebar-active" class="open-sidebar-btn">
               <svg

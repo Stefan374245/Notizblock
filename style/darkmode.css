@@ -1,0 +1,68 @@
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .dark-mode-toggle input[type="checkbox"] {
+    display: none;
+  }
+  
+  .dark-mode-toggle .toggle-label {
+    position: relative;
+    width: 50px;
+    height: 25px;
+    background-color: var(--secondary-color);
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dark-mode-toggle .toggle-label .toggle-ball {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 19px;
+    height: 19px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  
+  .dark-mode-toggle input[type="checkbox"]:checked + .toggle-label {
+    background-color: var(--accent-color);
+  }
+  
+  .dark-mode-toggle input[type="checkbox"]:checked + .toggle-label .toggle-ball {
+    transform: translateX(25px);
+  }
+  
+  /* Styling für die Icons */
+  .dark-icon {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Mond-Icon standardmäßig sichtbar */
+  .moon-icon {
+    opacity: 1;
+  }
+  
+  /* Sonne-Icon standardmäßig unsichtbar */
+  .sun-icon {
+    opacity: 0;
+  }
+  
+  /* Wenn der Toggle aktiviert ist (Dark Mode), Icons umschalten */
+  .dark-mode-toggle input[type="checkbox"]:checked + .toggle-label .toggle-ball .moon-icon {
+    opacity: 0;
+  }
+  
+  .dark-mode-toggle input[type="checkbox"]:checked + .toggle-label .toggle-ball .sun-icon {
+    opacity: 1;
+  }  

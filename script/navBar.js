@@ -29,3 +29,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const darkModeCheckbox = document.getElementById('dark-mode-checkbox');
+    const body = document.body;
+  
+    // Lade den Dark-Mode-Status aus dem localStorage
+    const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+    if (isDarkMode) {
+      body.classList.add('dark-mode');
+      darkModeCheckbox.checked = true;
+    }
+  
+    // Event Listener für den Dark Mode Toggle
+    darkModeCheckbox.addEventListener('change', () => {
+      if (darkModeCheckbox.checked) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('darkMode', 'disabled');
+      }
+    });
+  });

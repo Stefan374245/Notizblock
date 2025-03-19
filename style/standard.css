@@ -10,6 +10,16 @@
   --primary-hover-color: rgba(138, 238, 155, 0.637);
 }
 
+body.dark-mode {
+    --background-nav: rgba(50, 50, 50, 0.8);
+    --background: #181818;
+    --primary-color: #282828;
+    --secondary-color: #3a3a3a;
+    --accent-color: rgb(100, 200, 100);
+    --text-color: #e0e0e0;
+    --primary-hover-color: rgba(100, 200, 100, 0.7);
+  }
+
 * {
   margin: 0;
   padding: 0;
