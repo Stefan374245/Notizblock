@@ -47,6 +47,9 @@
     pointer-events: none; 
     overflow: hidden;
 }
+body.no-scroll {
+    overflow: hidden; /* Deaktiviert das Scrollen */
+}
 
 @media (max-width: 500px) {
     .edit-form {
