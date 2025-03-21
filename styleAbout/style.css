@@ -1,0 +1,46 @@
+.about-section, .history-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 800px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.about-section h2, .history-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about-section p, .history-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Dark Mode-Stil für die About-Section */
+body.dark-mode .about-section {
+    background-color: #222; /* Dunklerer Hintergrund für besseren Kontrast */
+    color: #e0e0e0; /* Helle Schriftfarbe */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Stärkerer Schatten im Dark Mode */
+    border: 1px solid #444; /* Angepasste Randfarbe */
+}
+
+body.dark-mode .about-section h2 {
+    color: #4caf50; /* Akzentfarbe für Überschriften */
+}
+
+body.dark-mode .about-section p {
+    color: #ccc; /* Helle Schriftfarbe für Absätze */
+}
+
+body.dark-mode .about-section p:last-child {
+    color: #aaa; /* Noch hellere Farbe für den letzten Absatz */
+}
+
+body.dark-mode .about-section p strong {
+    color: #4caf50; /* Akzentfarbe für hervorgehobenen Text */
+}

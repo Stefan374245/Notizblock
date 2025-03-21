@@ -1,0 +1,46 @@
+#impressum {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px 10px;
+}
+
+#impressum h1 {
+    font-size: 24px;
+    color: #0056b3;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#impressum p {
+    margin: 10px 0;
+}
+
+#impressum p strong {
+    color: #0056b3;
+}
+
+#impressum p:last-child {
+    font-size: 14px;
+    color: #666;
+}
+
+body.dark-mode #impressum {
+    background-color: #333;
+    color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition:ease-in-out 0.8s;
+}
+
+body.dark-mode #impressum p:last-child {
+    color: #aaa;
+}
+
+body.dark-mode #impressum p strong {
+    color: #4caf50;
+}

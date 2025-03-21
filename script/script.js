@@ -23,11 +23,6 @@ function addNote() {
     let noteTitle = titleInputRef.value.trim();
     let noteContent = noteInputRef.value.trim();
 
-    if (!noteTitle || !noteContent) {
-        alert('Bitte beide Felder ausfüllen.');
-        return;
-    }
-
     allNotes.notesTitles.push(noteTitle);
     allNotes.notes.push(noteContent);
 
@@ -36,6 +31,23 @@ function addNote() {
 
     titleInputRef.value = "";
     noteInputRef.value = "";
+   setTimeout(() => {
+        scrollToLastNote('content'); // 'content' ist die ID des Containers für Notizen
+    }, 100);
+}
+
+/**
+ * Scrollt zur letzten Notiz im angegebenen Container.
+ * @param {string} containerId - Die ID des Containers, der die Notizen enthält.
+ */
+function scrollToLastNote(containerId) {
+    const notesContainer = document.getElementById(containerId); // Container für die Notizen
+    if (notesContainer) {
+        const lastNote = notesContainer.lastElementChild; // Letzte Notiz im Container
+        if (lastNote) {
+            lastNote.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
 }
 
 /**

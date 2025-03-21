@@ -12,22 +12,39 @@
 }
 
 .note-item:hover {
-transform: scale(1.05);
-box-shadow: 0 5px 4px var(--accent-color);
+    transform: scale(1.05);
+    box-shadow: 0 5px 4px var(--accent-color);
 }
 
-.note-item h3 {
+.note-item h3,
+.note-item p {
     margin: 0;
     font-size: 18px;
     color: var(--text-color);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid var(--text-color);
+    animation: typing 3s steps(30, end), blink 0.5s step-end infinite;
 }
 
-.note-item p {
-    margin: 5px 0 15px;
-    font-size: 16px;
-    color: var(--text-color);
+/* Animation für das Schreiben */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
 
+@keyframes blink {
+    from {
+        border-color: transparent;
+    }
+    to {
+        border-color: var(--text-color);
+    }
+}
 
 .note-item button {
     align-self: center;
@@ -49,7 +66,6 @@ box-shadow: 0 5px 4px var(--accent-color);
     box-shadow: 0 4px 8px var(--box-shadow-color);
     transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
 }
-
 
 @media (max-width: 500px) {
     .note-item {

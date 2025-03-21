@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notizblock</title>
+
+    <link rel="stylesheet" href="styleAbout/style.css">
+    <link rel="stylesheet" href="style/standard.css">
+    <link rel="stylesheet" href="style/respNav.css">
+    <link rel="stylesheet" href="style/darkmode.css">
+
+    <script src="script/navBar.js"></script>
+</head>
+<body>
+    <header>
+        
+        <nav>
+            <h1>Notizblock</h1>
+            <div class="dark-mode-toggle">
+                <input type="checkbox" id="dark-mode-checkbox" />
+                <label for="dark-mode-checkbox" class="toggle-label">
+                    <span class="toggle-ball">
+                        <img src="./assets/icons/svg/moon-icon.svg" alt="Mond" class="dark-icon moon-icon" />
+                        <img src="./assets/icons/svg/sun-icon.svg" alt="Sonne" class="dark-icon sun-icon" />
+                    </span>
+                </label>
+            </div>
+            <input type="checkbox" id="sidebar-active" />
+            <label for="sidebar-active" class="open-sidebar-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="32px"
+                viewBox="0 -960 960 960"
+                width="32px"
+                fill="#e8eaed">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+              </svg>
+            </label>
+            <label id="overlay" for="sidebar-active"></label>
+            <div class="links-container">
+              <label for="sidebar-active" class="close-sidebar-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="32px"
+                  viewBox="0 -960 960 960"
+                  width="32px"
+                  fill="#e8eaed">
+                  <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg>
+              </label>
+              <a class="home-link" href="index.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="impressum.html">Impressum</a>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <section id="about-section" class="about-section">
+            <h2>Über die Notizblock App</h2>
+            <p>Die Notizblock App wurde entwickelt, um das Erstellen, Verwalten und Organisieren von Notizen so einfach wie möglich zu machen. Mit einer benutzerfreundlichen Oberfläche und praktischen Funktionen ist sie der perfekte Begleiter für den Alltag.</p>
+        </section>
+        <section  class="about-section history-section">
+            <h2>Entstehungsgeschichte</h2>
+            <p>Die Idee zur Notizblock App entstand aus dem Wunsch, eine einfache und effektive Lösung für das Notieren von Gedanken, Aufgaben und Ideen zu schaffen. Das Projekt begann im Jahr 2025 und wurde mit viel Leidenschaft und Engagement entwickelt, um den Nutzern ein großartiges Erlebnis zu bieten.</p>
+        </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        
+              <p>&copy; 2025 Helldobler <br>
+                  </p>
+              <p1>Icons made by <a href="https://fonts.google.com/icons" title="Google Fonts Icons" target="_blank" rel="noopener noreferrer">Google Icons</a></p1>
+      </div>
+  </footer>
+</body>
+</html>

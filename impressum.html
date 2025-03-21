@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notizblock</title>
+
+    <link rel="stylesheet" href="styleImpressum/style.css">
+    <link rel="stylesheet" href="style/standard.css">
+    <link rel="stylesheet" href="style/respNav.css">
+    <link rel="stylesheet" href="style/darkmode.css">
+
+    <script src="script/navBar.js"></script>
+</head>
+<body>
+    <header>
+        
+        <nav>
+            <h1>Notizblock</h1>
+            <div class="dark-mode-toggle">
+                <input type="checkbox" id="dark-mode-checkbox" />
+                <label for="dark-mode-checkbox" class="toggle-label">
+                    <span class="toggle-ball">
+                        <img src="./assets/icons/svg/moon-icon.svg" alt="Mond" class="dark-icon moon-icon" />
+                        <img src="./assets/icons/svg/sun-icon.svg" alt="Sonne" class="dark-icon sun-icon" />
+                    </span>
+                </label>
+            </div>
+            <input type="checkbox" id="sidebar-active" />
+            <label for="sidebar-active" class="open-sidebar-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="32px"
+                viewBox="0 -960 960 960"
+                width="32px"
+                fill="#e8eaed">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+              </svg>
+            </label>
+            <label id="overlay" for="sidebar-active"></label>
+            <div class="links-container">
+              <label for="sidebar-active" class="close-sidebar-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="32px"
+                  viewBox="0 -960 960 960"
+                  width="32px"
+                  fill="#e8eaed">
+                  <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg>
+              </label>
+              <a class="home-link" href="index.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="impressum.html">Impressum</a>
+            </div>
+          </nav>
+    </header>
+    <section id="impressum">
+        <h1>Impressum</h1>
+        <p><strong>Verantwortlich für den Inhalt:</strong></p>
+        <p>Stefan Helldobler<br>
+        Musterstraße 1<br>
+        12345 Musterstadt<br>
+        Deutschland</p>
+
+        <p><strong>Kontakt:</strong></p>
+        <p>Telefon: +49 123 456789<br>
+        E-Mail: max.mustermann@example.com</p>
+
+        <p><strong>Haftungsausschluss:</strong></p>
+        <p>Die Inhalte dieser Webseite wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
+    </section>
+    <footer>
+      <div class="footer-container">
+        
+              <p>&copy; 2025 Helldobler <br>
+                  </p>
+              <p1>Icons made by <a href="https://fonts.google.com/icons" title="Google Fonts Icons" target="_blank" rel="noopener noreferrer">Google Icons</a></p1>
+      </div>
+  </footer>
+</body>
+</html>
