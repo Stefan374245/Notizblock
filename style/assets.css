@@ -14,7 +14,7 @@ label svg {
 }
 
 label svg:hover {
-    fill: var(--primary-color);
+    fill: var(--accent-color);
 }
 
 label svg:active {

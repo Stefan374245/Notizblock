@@ -57,6 +57,7 @@ nav {
   
   @media (max-width: 500px) {
     .links-container {
+      display: block;
       flex-direction: column;
       align-items: flex-start;
       width: 220px;
@@ -78,8 +79,6 @@ nav {
       opacity: 1;
   }
 
-  
-
     nav a {
       box-sizing: border-box;
       height: auto;
@@ -92,6 +91,7 @@ nav {
     .close-sidebar-btn {
       padding: 20px;
       display: block;
+      width: fit-content;
     }
   
     #sidebar-active:checked ~ .links-container {

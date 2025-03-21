@@ -37,6 +37,7 @@ function saveEdit(index, category) {
     renderNotes();
     renderTrashNotes();
     renderArchivNotes();
+    saveToLocalStorage();
 
     // Schließe das Bearbeitungsformular
     closeEditForm();
