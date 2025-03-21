@@ -13,6 +13,8 @@ function editNote(index, category) {
 
     // Füge das Formular zum DOM hinzu
     document.body.insertAdjacentHTML('beforeend', editForm);
+    document.getElementById('main').classList.add('blurred');
+    document.body.classList.add('no-scroll'); 
 }
 
 function saveEdit(index, category) {
@@ -45,4 +47,6 @@ function closeEditForm() {
     if (editForm) {
         editForm.remove();
     }
+    document.getElementById('main').classList.remove('blurred');
+    document.body.classList.remove('no-scroll');
 }

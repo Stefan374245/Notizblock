@@ -23,15 +23,37 @@
 }
 
 .edit-form button {
-    margin-right: 10px;
+    width: 20vw;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     background-color: var(--accent-color);
     color: var(--background);
+    margin: 8px;
 }
 
 .edit-form button:hover {
     background-color: var(--primary-hover-color);
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#main.blurred {
+    filter: blur(5px);
+    pointer-events: none; 
+    overflow: hidden;
+}
+
+@media (max-width: 500px) {
+    .edit-form {
+        width: 90%;
+    }
+
+    .edit-form button {
+        width: 100%;
+    }
 }

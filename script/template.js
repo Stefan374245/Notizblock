@@ -60,8 +60,10 @@ function editFormTemplate(allNotes, index, category) {
         <input type="text" id="edit-title" value="${title}" />
         <label for="edit-content">Inhalt:</label>
         <textarea id="edit-content">${content}</textarea>
+        <div class="btn-container">
         <button onclick="saveEdit(${index}, '${category}')">Speichern</button>
         <button onclick="closeEditForm()">Abbrechen</button>
+        </div>
     </div>
     `;
 }
