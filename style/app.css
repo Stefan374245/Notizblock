@@ -88,11 +88,12 @@ button[type="submit"] {
     font: inherit;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 200ms ease;
+    transition: background-color 200ms ease, transform 200ms ease;
 }
 
 button[type="submit"]:hover {
     background-color: var(--primary-hover-color);
+    transform: scale(1.05) rotate(2deg);
 }
 
 @media (max-width: 500px) {

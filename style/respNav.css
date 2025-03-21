@@ -1,6 +1,6 @@
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
     align-items: center;
     height: 60px;
@@ -78,9 +78,7 @@ nav {
       opacity: 1;
   }
 
-    nav {
-      gap: 19%;
-    }
+  
 
     nav a {
       box-sizing: border-box;
@@ -108,17 +106,5 @@ nav {
       z-index: 9;
       transition: opacity 0.3s ease;
     }
-    
   }
   
-  @media (max-width: 450px) {
-    nav {
-      gap: 15%;
-    }
-  }
-
-  @media (max-width: 400px) {
-    nav {
-      gap: 5%;
-    }
-  }
