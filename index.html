@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./style/notes.css">
     <link rel="stylesheet" href="./style/assets.css">
     <link rel="stylesheet" href="./style/darkmode.css">
+    <link rel="stylesheet" href="./style/editNotes.css">
     
 
     <script src="./script/script.js"></script>
@@ -19,6 +20,7 @@
     <script src="./script/template.js"></script>
     <script src="./script/render.js"></script>
     <script src="./script/navBar.js"></script>
+    <script src="./script/editNotes.js"></script>
 </head>
 <body onload="init()">
     <header>
@@ -64,6 +66,7 @@
           </nav>
     </header>
     <main id="main">
+        <!-- Formular zum Erstellen neuer Notizen -->
         <section class="wrapper">
             <h2>Neue Notiz erstellen</h2>
             <form id="note-form" onsubmit="event.preventDefault(); addNote();">
@@ -80,12 +83,12 @@
                 </button>
             </form>
         </section>
-
+    
         <!-- Notizen anzeigen -->
         <section class="wrapper">
             <h2>Notizen</h2>
-            <div id="content">
-                <div class="note-item">
+            <div id="content" class="category" ondrop="moveTo('notes')" ondragover="allowDrop(event)">
+                <div class="note-item" draggable="true" ondragstart="startDragging(0)">
                     <h3>Beispiel Titel</h3>
                     <p>Beispiel Inhalt</p>
                     <button onclick="moveNote(0, 'notes', 'trashNotes')">
@@ -97,32 +100,32 @@
                 </div>
             </div>
         </section>
-        
+    
         <!-- Papierkorb anzeigen -->
         <section class="wrapper">
             <h2>Papierkorb</h2>
-            <div id="trash-content">
-                <div class="note-item">
+            <div id="trash-content" class="category" ondrop="moveTo('trashNotes')" ondragover="allowDrop(event)">
+                <div class="note-item" draggable="true" ondragstart="startDragging(1)">
                     <h3>Beispiel Papierkorb-Titel</h3>
                     <p>Beispiel Papierkorb-Inhalt</p>
-                    <button onclick="moveNote(0, 'trashNotes', 'notes')">
+                    <button onclick="moveNote(1, 'trashNotes', 'notes')">
                         <img src="./assets/icons/undo_icon.png" alt="Wiederherstellen" class="icon"> Wiederherstellen
                     </button>
-                    <button onclick="deleteTrash(0)">
+                    <button onclick="deleteTrash(1)">
                         <img src="./assets/icons/delete.png" alt="Löschen" class="icon"> Löschen
                     </button>
                 </div>
             </div>
         </section>
-        
+    
         <!-- Archiv anzeigen -->
         <section class="wrapper">
             <h2>Archiv</h2>
-            <div id="archiv-content">
-                <div class="note-item">
+            <div id="archiv-content" class="category" ondrop="moveTo('archivNotes')" ondragover="allowDrop(event)">
+                <div class="note-item" draggable="true" ondragstart="startDragging(2)">
                     <h3>Beispiel Archiv-Titel</h3>
                     <p>Beispiel Archiv-Inhalt</p>
-                    <button onclick="moveNote(0, 'archivNotes', 'notes')">
+                    <button onclick="moveNote(2, 'archivNotes', 'notes')">
                         <img src="./assets/icons/undo_icon.png" alt="Wiederherstellen" class="icon"> Wiederherstellen
                     </button>
                 </div>

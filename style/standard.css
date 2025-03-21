@@ -2,7 +2,7 @@
 
 :root {
   --background-nav: rgba(138, 238, 155, 0.637);
-  --background: #101114;
+  --background: #2c2e33;
   --primary-color: #1c1d20;
   --secondary-color: #4a4d57;
   --accent-color: rgb(138, 238, 155);
@@ -15,9 +15,9 @@ body.dark-mode {
     --background: #181818;
     --primary-color: #282828;
     --secondary-color: #3a3a3a;
-    --accent-color: rgb(100, 200, 100);
+    --accent-color: rgb(16, 40, 119);
     --text-color: #e0e0e0;
-    --primary-hover-color: rgba(100, 200, 100, 0.7);
+    --primary-hover-color: rgb(14, 31, 88);
   }
 
 * {
@@ -36,6 +36,7 @@ html {
 body {
   min-height: 100vh;
   background-color: var(--background);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 main {

@@ -1,4 +1,3 @@
-
 let allNotes = {
     'notesTitles': [],
     'notes': [],
@@ -7,4 +6,3 @@ let allNotes = {
     'archivNotesTitles': [],
     'archivNotes': []
 };
-
